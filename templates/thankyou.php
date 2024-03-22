@@ -7,6 +7,9 @@ include('partials/header.php');
         <div class="row">
           <div class="col-100 text-center">
               <h2>Ďakujeme za vyplnenie formulára</h2>
+              <?php
+                print_r($_POST);
+              ?>
           </div>
         </div>
       </section>
