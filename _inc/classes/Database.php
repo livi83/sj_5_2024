@@ -17,6 +17,7 @@
                                       $this->user_name, 
                                       $this->password);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
                 return $connection;
                 
             }catch(PDOException $e){
