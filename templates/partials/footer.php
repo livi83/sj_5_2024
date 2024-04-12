@@ -19,7 +19,9 @@
            'Q&A'=>'qna.php',
            'Kontakt'=>'kontakt.php'  
            );
-           echo(generate_menu($pages));
+           //echo(generate_menu($pages));
+           $menu_object = new Menu($pages);
+           echo($menu_object->generate_menu());
         ?>
       </div>
       <div class="col-25">
@@ -32,7 +34,10 @@
     </div>
   </footer>
     <?php
-      add_scripts();
+      //add_scripts();
+      $page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
+      $page_object = new Page($page_name);
+      $page_object->add_scripts();
     ?>
 </body>
 </html>

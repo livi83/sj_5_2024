@@ -9,7 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php 'Moj web | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
     <?php
-      add_stylesheet();
+      //add_stylesheet();
+      $page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
+      $page_object = new Page($page_name);
+      $page_object->add_stylesheet();
     ?>
 </head>
 <body>
@@ -27,7 +30,9 @@
                 'Q&A'=>'qna.php',
                 'Kontakt'=>'kontakt.php'  
            );
-           echo(generate_menu($pages));
+           //echo(generate_menu($pages));
+           $menu_object = new Menu($pages);
+           echo($menu_object->generate_menu());
         ?>
        
         </ul>
