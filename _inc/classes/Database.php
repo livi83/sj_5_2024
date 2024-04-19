@@ -3,7 +3,7 @@
     class Database{
 
         private $host = 'localhost';
-        private $db_name = 'sj_5_2024';
+        private $db_name = 'webstranka_test';
         private $user_name = 'root';
         private $password = '';
 
