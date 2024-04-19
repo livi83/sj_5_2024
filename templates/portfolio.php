@@ -16,7 +16,7 @@ include('partials/header.php');
             }
 
             echo '<div class="col-25 portfolio text-white text-center" style="background-image: url(\''.$portfolio[$i]->image.'\');">';
-            echo '<a href="">'.$portfolio[$i]->name.'</a>';
+            echo '<a href="../templates/portfolio-single.php?id='.$portfolio[$i]->id.'">'.$portfolio[$i]->name.'</a>';
             echo '</div>';
 
             if ($temp_i % 4 == 0 || $temp_i == count($portfolio)) {
