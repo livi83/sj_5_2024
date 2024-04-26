@@ -40,6 +40,11 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                                     <button type="submit" name="delete_contact" value="'.$c->id.'"'.'>Vymazať</button>
                                 </form>
                               </td>';
+                        echo '<td>
+                                <form action="kontakt-update.php" method="POST">
+                                  <button type="submit" name="edit_contact" value="'.$c->id.'"'.'>Editovať</button>
+                                </form>  
+                             </td>';
                         echo '</tr>';
                     }
                     
