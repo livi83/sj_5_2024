@@ -14,6 +14,13 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                     $contact_object = new Contact();
                     $contacts = $contact_object->select();
 
+                    if(isset($_POST['delete_contact'])){
+                        $contact_id = $_POST['delete_contact'];
+                        $contact_object->delete($contact_id);
+                        header('Location: admin.php');
+                        die();
+                    }
+
                     echo '<table class="admin-table">';
                     echo '<tr><th>Name</th>
                               <th>Email</th>
