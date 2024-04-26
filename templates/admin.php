@@ -27,6 +27,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                               <th>Message</th>
                               <th>Acceptance</th>
                               <th>Delete</th>
+                              <th>Edit</th>
                           </tr>';
                     foreach($contacts as $c){
                         echo '<tr>';
