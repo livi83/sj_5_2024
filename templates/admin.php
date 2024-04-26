@@ -19,6 +19,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                               <th>Email</th>
                               <th>Message</th>
                               <th>Acceptance</th>
+                              <th>Delete</th>
                           </tr>';
                     foreach($contacts as $c){
                         echo '<tr>';
@@ -26,6 +27,11 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                         echo '<td>'.$c->email;'</td>';
                         echo '<td>'.$c->message;'</td>';
                         echo '<td>'.$c->acceptance;'</td>';
+                        echo '<td>
+                                <form action="" method="POST">
+                                    <button type="submit" name="delete_contact" value="'.$c->id.'"'.'>Vymazať</button>
+                                </form>
+                              </td>';
                         echo '</tr>';
                     }
                     
